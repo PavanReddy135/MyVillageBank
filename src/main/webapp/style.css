@@ -1,0 +1,199 @@
+/* Navbar Section */
+.section {
+  width: 100%;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('images/MyVillage4.png');
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  margin-right: 30px;
+  position: relative;
+}
+
+a {
+  color: white; /* Change text color to white for better contrast */
+  text-decoration: none;
+  font-size: 20px;
+}
+
+a:hover {
+  color: darkred;
+  text-decoration: underline;
+}
+
+/* Home Image Section */
+.home img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: ellipse(90% 90% at 50% 50%); /* Adjust the clip-path for a more balanced image */
+  filter: brightness(70%); /* Slightly darken the image for better contrast */
+}
+
+/* Main Section Text */
+.maintext h1 span {
+  font-family: 'MV Boli', cursive;
+  color: deepskyblue;
+  font-size: 40px;
+}
+
+.maintext p {
+  font-family: cursive;
+  font-size: larger;
+  margin-left: 70px;
+}
+
+.maintext p span {
+  font-family: 'MV Boli', cursive;
+  color: deepskyblue;
+}
+
+/* Responsive Design: Adjustments for Laptop and Larger Screens */
+
+/* For screens larger than 768px (typical for laptops/desktops) */
+@media (min-width: 768px) {
+  body {
+    padding-top: 120px; /* Ensure top padding remains consistent */
+  }
+
+  .home img {
+    clip-path: ellipse(80% 80% at 50% 50%); /* Slightly adjust clip-path on larger screens */
+  }
+
+  .maintext h1 {
+    font-size: 36px; /* Larger text on bigger screens */
+  }
+
+  .maintext p {
+    font-size: 1.2rem; /* Slightly larger font for more readability */
+  }
+
+  .boxes {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust gap for better alignment */
+    margin: 220px 20px 0; /* Adjust margin for better spacing */
+  }
+
+  .box {
+    width: 350px;
+    height: 200px;
+    background-color: lemonchiffon;
+    border-radius: 10px;
+    padding: 4px;
+    text-align: center;
+  }
+
+  .box h1 {
+    font-size: 22px;
+  }
+
+  .box p {
+    margin-top: 20px;
+  }
+
+  .branches h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .branches h3 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .branch-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    justify-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .branch-list div {
+    background-color: #fff;
+    color: #1a1a1a;
+    padding: 12px 24px;
+    border-radius: 15px;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+
+  .branch-list div:hover {
+    transform: translateY(-4px);
+    background-color: lemonchiffon;
+  }
+}
+
+/* For very large screens (greater than 1200px, typically desktops and large laptops) */
+@media (min-width: 1200px) {
+  .section {
+    height: 100px; /* Increase navbar height for larger screens */
+  }
+
+  .maintext h1 {
+    font-size: 40px; /* Bigger heading on large screens */
+  }
+
+  .maintext p {
+    font-size: 1.3rem; /* Increase font size for better readability */
+  }
+
+  .boxes {
+    gap: 25px; /* Bigger gap between boxes for a cleaner look */
+  }
+
+  .box {
+    width: 400px;
+    height: 220px;
+  }
+}
+
+/* For small screens (less than 768px, typically mobile devices) */
+@media (max-width: 768px) {
+  .section {
+    height: 70px; /* Adjust navbar height for smaller screens */
+  }
+
+  .maintext h1 {
+    font-size: 28px; /* Smaller font size for mobile */
+  }
+
+  .maintext p {
+    font-size: 1.1rem; /* Slightly smaller font size */
+  }
+
+  .boxes {
+    flex-direction: column; /* Stack the boxes vertically on smaller screens */
+    align-items: center;
+  }
+
+  .box {
+    width: 90%; /* Make boxes take up more width on small screens */
+    margin-bottom: 20px;
+  }
+
+  .branch-list {
+    display: block; /* Display branches in a single column on smaller screens */
+    margin-top: 30px;
+  }
+}
